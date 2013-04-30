@@ -1,0 +1,51 @@
+.ui-button .ui-button-text { 
+	*line-height: 1em !important;
+	line-height: 1.5;
+}
+.ui-button-text-only .ui-button-text{
+	padding:0.2em 0.3em;
+}
+.ui-dialog .ui-dialog-buttonpane {
+	padding:0 1.2em 0.1em 0.4em;
+}
+
+.ui-button{
+	margin-right: 0em;
+}
+
+.ui-tabs .ui-tabs-hide {
+     display: none;
+}
+#content .ui-widget {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+}
+
+#content .ui-tabs .ui-tabs-nav li a{
+	padding-bottom:0em;
+	padding-top:0.2em;
+}
+.ui-autocomplete-input{
+	padding:0px;
+	margin: 0px;
+}
+.autoComplete button span[class=ui-button-text]{
+	padding:0px;
+	margin: 0px;
+	line-height:1.35em;
+}
+.autoComplete button{
+	 width: 1.5em;
+}
+.miniButton .ui-button-text{
+	padding-top:0px;
+	padding-bottom:0px;
+	font-size: 9pt;
+	*line-height: 1.2em !important;
+}
+
+.ui-tabs .ui-tabs-nav .alert img {
+    border-width: 0px;
+	height:13px;
+	width:13px;
+}

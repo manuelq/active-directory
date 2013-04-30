@@ -1,0 +1,46 @@
+.pageWidth {
+	width:720px;
+}
+.spacePadding1 {
+	padding-left:20px;
+}
+.spacePadding2 {
+	/*padding-left:200px;*/
+	float:right;
+}
+.lineSetting0 {
+	width: 650px;
+	text-align:left;
+	padding-top:1.0em;
+	padding-left:20px;
+}
+.lineSetting1 {
+	width: 650px;
+	text-align:left;
+	padding-left:20px;
+}
+.lineSetting2 {
+	padding-top:0.0em;
+	margin-bottom:0.5em;
+	padding-left:20px;
+}
+.lineSetting4 {
+	width: 700px;
+	text-align:left;
+	padding-left:20px;
+}
+.lineSetting3 {
+	font-weight:normal;
+	font-size:12px;
+}
+.boxSetting1 {
+	padding-left:20px;
+	margin-left:1em;
+	margin-right:2em;
+    border: 2px solid #000;
+    width:720px;
+}
+.inboxSetting1 {
+	font-style:italic;
+	padding-left:20px;	
+}

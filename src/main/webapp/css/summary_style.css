@@ -1,0 +1,147 @@
+.heading {
+    color: white !important;
+    background: none repeat scroll 0 0 #003388;
+    margin-top: -1em;
+    margin-bottom: 0.31em;
+    width: 20em;
+    border: 2px solid #666666;
+    padding: 2px 5px;
+    display: block;
+    text-align: center;
+    text-decoration: none;    
+}
+.section {
+    display:block;
+    clear:both;
+    padding: 5px;
+    background: #F2EFE9;
+    border: 1px solid #242;
+    margin-bottom: 2em;
+    text-align: left;
+}
+.section-heading {
+    color: white !important;
+    background: none repeat scroll 0 0;
+    background-image: url("mdor_blue/images/ui-bg_glass_95_003568_1x400.png");
+    background-position: 50% 50%;        
+    margin-left: 7px;
+    margin-top: -1.25em;
+    margin-bottom: 0.31em;
+    width: 19em;
+    border: 2px solid #666666;
+    padding: 2px 5px;
+    display: block;
+    text-align: center;
+    text-decoration: none;    
+    font-family:helvetica, sans-serif;    
+    font-weight:bold;
+    font-size:small
+}
+.outer-section {
+    display:block;
+    clear:both;
+    page-break-inside:avoid;
+    padding-top:1.0em;
+}	
+.inner-section {
+    display:block;
+    clear:both;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #000;
+    margin-bottom: 1em;
+    text-align: left;
+    page-break-inside: avoid;
+}	
+.sub-group {
+    padding: 1px;
+    margin-bottom: 0.2em;
+    text-align: left;
+    font-family:helvetica, sans-serif;
+    font-size:small;
+}
+
+.summaryLabelColumn1,.summaryLabelThreeColumnLayoutSecondColumn,.summaryLabelThreeColumnLayoutThirdColumn,.summaryLabelTwoColumnLayoutSecondColumn,.summaryLabelFourColumnLayoutSecondColumn,.summaryLabelFourColumnLayoutThirdColumn,.summaryLabelFourColumnLayoutFourthColumn,.summaryLabelTwoColumnLayoutShortSecondColumn,.summaryValue{
+    display: inline-block;
+    margin: 0px;
+}
+
+.summaryLabelColumn1{
+	width: 240px;
+    text-align:right;
+}
+
+.summaryLabelThreeColumnLayoutSecondColumn{
+	width: 118px;
+    text-align:right;
+}
+
+.summaryLabelThreeColumnLayoutThirdColumn{
+	width: 125px;
+    text-align:right;
+}
+
+.summaryLabelTwoColumnLayoutSecondColumn{
+	width: 280px;
+    text-align:right;
+}
+
+.summaryLabelTwoColumnLayoutShortSecondColumn{
+	width: 220px;
+    text-align:right;
+}
+
+.summaryLabelFourColumnLayoutSecondColumn{
+	width: 102px;
+    text-align:right;
+}
+
+.summaryLabelFourColumnLayoutThirdColumn,.summaryLabelFourColumnLayoutFourthColumn{
+	width: 50px;
+    text-align:right;
+}
+.summaryValue{ 
+	text-align:left;
+	width:30px;
+    font-weight: bold;	
+    white-space: nowrap;
+}
+
+.summaryValueWrap {
+    width: auto;	
+    text-align:left;
+    font-weight: bold;	    
+}
+
+.ctop {
+    vertical-align: top;
+}
+.sub-top { 
+    font-style:italic;
+    border-bottom: 1px solid #c3c3c3;
+    padding-top: 0.5em;
+    text-align:left;
+}
+
+
+.break-line {
+    line-height:1px;
+    padding:2px;
+    margin:0px;
+    margin-left:25px;
+    border-top:1px solid #c3c3c3;
+    width:auto;
+    display: block;
+}		
+
+.inlineDisplay span {
+    vertical-align: top;
+	display: inline-block;
+}
+
+.summaryValueWrap2 {
+    width: 400px;	
+    text-align:left;
+    font-weight: bold;	   
+    display: block; 
+}		

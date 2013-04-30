@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+        <!-- AspectJ pointcut expression that locates our "post" method and applies security that way
+    <global-method-security pre-post-annotations="enabled" >
+        <protect-pointcut expression="execution(* bigbank.*Service.post*(..))" access="ROLE_TELLER"/>
+    </global-method-security>
+        -->
+    
+    <http use-expressions="true" entry-point-ref="myEntryPoint"  authentication-manager-ref="clientAuthenticationManger">
+    	<intercept-url pattern="/images/**" access="permitAll"/>
+    	<intercept-url pattern="/js/**" access="permitAll"/>
+    	<intercept-url pattern="/css/**" access="permitAll"/>
+        <intercept-url pattern="/index.jsp" access="permitAll"/>
+        <intercept-url pattern="/pages/somepage" access="permitAll"/>
+        <intercept-url pattern="/login.jsp*" access="permitAll"/>
+        <intercept-url pattern="/**/*.do" access="isAuthenticated()" />
+        <intercept-url pattern="/**" access="isAuthenticated()" />
+        <form-login login-page="/login.jsp" authentication-failure-url="/login.jsp?login_error=1"/>
+        <http-basic  />
+        <logout invalidate-session="true" logout-success-url="/login.jsp?loggedout=true" />
+    </http>
+    
+    <beans:bean id="myEntryPoint" class="com.adtest.web.security.MyAuthenticationEntryPoint">
+    	<beans:property name="loginFormUrl" value="/login.jsp"></beans:property>
+    </beans:bean>
+        
+	<beans:bean id="adAuthenticationProvider"
+		class="org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider">
+		<beans:constructor-arg value="com.domain.app" />
+		<beans:constructor-arg value="ldap://stpdc02.com.domain.app/" />
+	</beans:bean>
+	
+	<authentication-manager id="clientAuthenticationManger"> 
+		<authentication-provider ref="adAuthenticationProvider"/>
+	</authentication-manager>
+</beans:beans>

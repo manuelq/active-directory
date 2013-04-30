@@ -1,0 +1,240 @@
+.formHeader{
+	display:inline-block;
+	width:100%;
+	position:relative;
+}
+
+.formHeader div{
+	float:left;
+	padding-right:15px;
+}
+
+.formHeader .form-fieldset{
+	/*width:236px;*/
+}
+
+.formHeader img{
+	border-width: 0px;
+	border-style: none;
+	position:absolute;
+	bottom:0px;
+}
+
+.formHeader img.pdf{
+	float: right;
+	position: relative;
+}
+
+.form-note{
+	width:98%;
+	color: #666666;
+	font-style: italic;
+	padding-top:5px;
+	padding-bottom:5px;
+	display:block;
+}
+
+input[readonly] {
+	border: 1px solid #999;
+	background-color: #ddd;
+}
+
+.form-label,.form-long-label,.form-mini-label,.form-mid-label{
+	float: left;
+	text-align: right;
+	margin-right: 0.5em;
+	width: 262px;
+	display: block;
+	padding-top:2px;
+	/*color: #666666;*/
+}
+.form-label-x{
+	display:inline-block;
+	text-align:left;
+	margin-right: 0.5em;
+	width: 500px;
+	padding-top:2px;
+	color: #666666;
+}
+.form-mini-label{
+	width: 100px!important;
+}
+
+.form-mid-label{
+	width: 374px !important;
+}
+
+.form-long-label{
+	width: 525px!important;
+}
+
+.form-mid-input{
+	width: 180px!important;
+}
+
+.form-long-input{
+	width: 350px!important;
+}
+
+.form-field-value{
+    text-align:left;
+    font-weight: bold;	    
+}	
+
+.form-input-set{
+	display: inline-block;
+	padding-bottom:2px;
+	padding-top:2px;
+	width:100%;
+	clear:both;
+}
+
+.form-input-set input{
+	vertical-align:top;
+}
+
+.form-fieldset{
+	border-color:#000000;
+	background-color: white;
+	position:relative\9;
+	display:block;
+	padding:15px;
+}
+
+.form-fieldset legend {
+	padding: 0px 10px 0px 10px\9;
+	position: absolute\9;
+	top: -10px\9;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+/* used for diplaytag with Tablesorter - class and classheaader attributes */
+table td.hidden {
+     display: none;
+}
+table th.hidden {
+     display: none;
+}
+
+
+fieldset.indexed-form-fieldset{
+	position:relative;
+	padding:0px;
+	margin:10px;
+	border-color:#808080;
+	border-style:solid;
+	border-width:1px;
+}
+
+.indexed-form-fieldset button.delete_button{
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+button.btn{
+	margin:5px;
+}
+
+button.delete_button span{
+	padding:0px !important;
+	width:17px;
+}
+
+
+.error {
+	color: #ff0000;
+	font-style: italic;
+}
+
+div.error{
+	margin-bottom:10px;
+	text-align:center;
+}
+
+.mini img {
+	height: 10px;
+	width: 10px;	
+}
+
+.alert {
+	display:inline-block;
+}
+
+.toolTipWrapper {
+	z-index:24; 
+	position:absolute;
+	display:inline-block;
+}
+
+.toolTipMid{
+	position:relative;
+	padding:4px;
+	border-width:1px;
+	border-style:solid;
+	background-color: #EEEFA4;
+	white-space:nowrap !important;
+	overflow: visible;
+	color:black;
+}
+
+
+.warning {
+	color:red;
+	font-weight:bold;
+}
+
+strong.required {
+	color: #ff0000;
+	vertical-align:top;	
+}
+.batchEditLinks{
+	text-align: center;
+}
+
+table.form-selectable-table {
+	color:#333333;
+	width:100%;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+
+table.form-selectable-table .toolTipMid{
+	width:100%;
+}
+
+table.form-selectable-table tr {
+	background-color:#eeeeee;
+}
+
+table.form-selectable-table .hover{
+	border-color:green !important;
+	cursor:pointer;
+}
+
+table.form-selectable-table tr.selected{ 
+	background-color: #DBECF9!important; 
+	cursor:auto;
+}
+
+table.form-selectable-table th {
+	background-color:#8BABDF;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+
+table.form-selectable-table td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+
+table.inputtable {
+    width: auto !important;
+}

@@ -1,0 +1,29 @@
+#content {
+	background:none repeat scroll 0 0 #F1F1F1;
+	border-color:-moz-use-text-color black black;
+	border-right:2px solid black;
+	border-style:none;
+	border-width:medium 2px 2px;
+	padding:20px!important;
+	text-align:justify;
+	display:block;
+	width:-moz-available;
+	z-index:2;
+}
+
+#content .form-fieldset{
+	padding-top:15px\9;
+	margin-bottom:10px;
+	margin-bottom:15px\9;
+}
+
+#tabmenu{
+	padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+}
+
+.ui-widget {
+	font-size:10pt;
+}

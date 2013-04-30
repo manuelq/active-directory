@@ -1,0 +1,134 @@
+table.error td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: .95em;
+	background-color: White;
+	color: Red;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+div.header-section {
+	display:inline;
+	width:100%;
+	height: 75px;
+}
+
+div.content-section {
+	display:block;
+	font-size:10pt;
+	vertical-align:top;
+	z-index:2;
+	min-height:500px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+div.accept-section {
+	display:inline-block;
+	font-size:10pt;
+	left:15px;
+	padding-top:15px;
+	padding-bottom:15px;
+	position:relative;
+	vertical-align:top;
+	width:900px;
+	z-index:2;
+	min-height:120px;
+}
+
+div.footer-section {
+ -moz-border-bottom-colors: none;
+    -moz-borkder-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #C0C0C0;
+    background-image: url("../images/mdor_blue/bg_footer.gif");
+    background-position: left top;
+    background-repeat: repeat-x;
+    border-bottom-color: green;
+    border-bottom-style: solid;
+    border-bottom-width: 0;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: green;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 0;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: green;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 0;
+    border-top-color: green;
+    border-top-style: solid;
+    border-top-width: 0;
+    clear: both;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 6px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 6px;
+    text-align: center;
+}
+.footer-section p {
+	color: #FFFFFF;
+}
+.footer-section a {
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: solid;
+    color: #FFFFFF;
+    padding-right: 14px;
+}
+
+.footer-section a:hover, .footer-section a:active {
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: underline;
+    -moz-text-decoration-style: solid;
+    color: #FFFFFF;
+}
+
+.content-header{
+	color: #ffffff;
+	background-image: url("mdor_blue/images/ui-bg_glass_95_003568_1x400.png");
+	background-position: 50% 50%;
+	border: 2px solid #666666;
+	padding: 2px 6px;
+	margin-top:0px;
+	margin-left:7px;
+	font-weight: bold;
+}
+
+.page-header {
+	color: #006633;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: left;
+	width: auto;
+	margin: 0px 0px 10px 0px;
+}
+
+.page-message {
+	color: #666666;
+	font-size: .88em;
+	text-align: left;
+	margin: 0px 0px 20px 0px;
+}

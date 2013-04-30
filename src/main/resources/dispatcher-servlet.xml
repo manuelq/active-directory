@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	                    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.adtest.controller"/>
+	<context:component-scan base-package="us.mn.state.adtest.validator"/>
+	<mvc:annotation-driven />
+	
+	
+	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"  >
+		<property name="alwaysUseFullPath" value="true"></property>
+		<property name="interceptors">
+			<list>
+				<ref bean="openSessionInViewInterceptor"/>
+			</list>
+		</property>
+	</bean>
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/pages/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerExceptionResolver">
+		<property name="order" value="1"/>
+	</bean>
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="order" value="2"/>
+		<property name="warnLogCategory" value="SPringDispatcher"/>
+		<property name="exceptionMappings">
+			<props>
+				<prop key="org.springframework.web.servlet.PageNotFound">pageNotFound</prop>
+				<prop key="org.springframework.doa.DataAccessException">dataAccessFailure</prop>
+				<prop key="org.springframework.transaction.TransactionException">dataAccessFailure</prop>
+			</props>
+		</property>
+		<property name="defaultErrorView" value="error"/>
+	</bean>
+	<bean id="openSessionInViewInterceptor" class="org.springframework.orm.hibernate3.support.OpenSessionInViewInterceptor">
+		<property name="sessionFactory" ref="sessionFactory"/>
+		<property name="flushModeName" value="FLUSH_AUTO"/>
+	</bean>
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>classpath:messages</value>
+				<value>classpath:ValidatorMessages</value>
+			</list>
+		</property>
+		<property name="cacheSeconds" value="5"/>
+	</bean>
+</beans>

@@ -1,0 +1,13 @@
+
+
+table.diff tbody td{white-space:normal}
+table.diff tbody td em{font-style:normal;margin:0 -.09em;padding:.05em 0;white-space:pre}
+table.diff .empty{background-color:#ddd}
+table.diff .replace{background-color:#fd8}
+table.diff .replace em{background-color:#ffd;border:.1em solid #963;color:#630}
+table.diff .delete{background-color:#e99}
+table.diff .delete em{background-color:#fdd;border:.1em solid #700;color:#600}
+table.diff .equal{background-color:#fff}
+table.diff .skip{background-color:#efefef;border:.1em solid #aaa;border-right:.1em solid #bbc}
+table.diff .insert{background-color:#9e9}
+table.diff .insert em{background-color:#efc;border:1px solid #070;color:#050}

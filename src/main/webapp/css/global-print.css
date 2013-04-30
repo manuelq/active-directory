@@ -1,0 +1,331 @@
+@page {
+    size: 8.5in 11in;
+    margin: 0.25in;
+    -fs-flow-top: "header";
+    -fs-flow-bottom: "footer";
+    -fs-flow-left: "left";
+    -fs-flow-right: "right";
+    border: thin solid black;
+    padding: 0.5em;
+}
+
+#page-head-left {
+    font-size: 80%;
+    font: bold serif;
+    position: absolute; top: 0;
+    text-align:left;
+    margin-left:15px;
+    -fs-move-to-flow: "header";
+}
+
+#page-head-right
+{
+    font-size: 80%; font-style: italic;
+    position: absolute;  top: 0;  right: 0;
+    margin-right: 40px;
+    text-align: right;
+    -fs-move-to-flow: "footer";
+}
+
+#footer {
+    /*display:none;*/
+    font-size: 80%; font-style: italic;
+    position: absolute;
+    bottom: 10px; right: 0;
+    margin-right: 40px;
+    text-align: right;
+    /*border-top: 1px solid #000000;*/
+    -fs-move-to-flow: "footer";
+}
+
+#pagenumber:before {
+    content: counter(page);
+}
+
+#pagecount:before {
+    content: counter(pages);
+}
+
+body {
+    font-family: Helvetica;
+    font-size: 80%;
+    margin-top: 10px;
+}
+
+h2 {
+    margin:20px;
+}
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0px 0px 30px 0;
+    font-family: Verdana, Helvetica;
+    padding-left: 15px;
+    color: #666666;
+}
+.h1 {
+    font-size:x-large;
+    font-weight:bolder;
+    margin: 0px 0px 10px 0;
+    font-family: Verdana;
+    padding-left: 15px;
+    color: #666666;
+}
+
+.crvID {
+    width: 16em;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-left: 5px;
+    color: #000000;
+}
+
+.heading {
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    background: #242;
+    margin-top: -1em;
+    margin-bottom: 0.31em;
+    width: 20em;
+    border: 0;
+    padding: 2px 5px;
+    display: block;
+    text-align: center;
+}
+
+.schema-version {
+    margin-left:100px;font-size:9px;
+}
+
+.section-heading {
+    /*font-size: 1em;*/
+    display:block;
+    /*float:left;*/
+    font-family:monospace;
+    font-size:12px;
+    font-style:italic;
+    font-weight:normal;
+    width:190px;
+    margin-top: 0.2em;
+    text-align:left;
+    /*margin-bottom: 0.2em;*/
+}
+
+.sub-heading {
+    /*font-size: 1em;*/
+    display:block;
+    /*clear:both;*/
+    /*float:left;*/
+    font-family:monospace;
+    font-size:11px;
+    font-style:italic;
+    font-weight:bold;
+    border-bottom: 1px solid #c3c3c3;
+    width:710px;
+    padding-top: 0.5em;
+    text-align:left;
+    /*margin-bottom: 0.2em;*/
+}
+
+.group {
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #242;
+    margin-bottom: 2em;
+    text-align: left;
+    page-break-inside: avoid;
+}
+.section {
+    display:block;
+    clear:both;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #242;
+    margin-bottom: 2em;
+    text-align: left;
+    page-break-inside: avoid;
+}
+.section p {
+    display:block;
+    clear:both
+    page-break-inside: avoid;
+}
+.sub-group {
+    /*background-color:#c3c3c3;*/
+    padding: 1px;
+    /*border-top: 1px solid #c3c3c3;*/
+    margin-bottom: 0.2em;
+    text-align: left;
+    page-break-inside:avoid;
+}
+.sub-group p {
+    display:block;
+    clear:both;
+}
+.sub-section {
+    /*background-color:#c3c3c3;*/
+    display:block;
+    /*padding: 3px;*/
+    /*margin: 3px;*/
+    /*border-top: 1px solid #c3c3c3;*/
+    text-align: left;
+    page-break-inside:avoid;
+}
+
+.info-piece {
+    clear:both;
+    display:block;
+    page-break-inside:avoid;
+}
+.narrative-float {     /* old method that caused problems with PDF & print */
+    float:left;
+    font-family:monospace;
+    font-size:10px;
+    width:200px;
+    text-align:right;
+}
+.value-float {        /* old method that caused problems with PDF & print */
+    float:left;
+    display:inline;
+    font-style:normal;
+    font-size:12px;
+    font-weight:bold;
+    font-family:monospace;
+    text-align:left;
+    margin-left: 15px;
+}
+.narrative {
+    display:inline-block;
+    font-family:monospace;
+    font-size:10px;
+    line-height: 1em;
+    width:200px;
+    text-align:right;
+}
+.value {
+    display:inline;
+    font-style:normal;
+    font-size:12px;
+    font-weight:bold;
+    font-family:monospace;
+    line-height: 0.9em;
+    text-align:left;
+    margin-left: 12px;
+}
+.narrative2 {
+/* following 2 lines caused a bug in printing */
+    /*left:325px;*/
+/*position:absolute;*/
+/* following line used as alternate for printing */
+    margin-left:175px;
+    font-family:monospace;
+    font-size:10px;
+    width:200px;
+    text-align:right;
+    line-height:1.8em;
+}
+.value2 {
+/* following 2 lines caused a bug in printing */
+/*position: absolute;*/
+    /*left: 525px;*/
+    font-style:normal;
+    font-size:12px;
+    font-weight:bold;
+    font-family:monospace;
+    line-height: 0.9em;
+    text-align:left;
+    margin-left: 12px;
+}
+.narrative2long {
+    margin-left:175px;
+    font-family:monospace;
+    font-size:10px;
+    width:200px;
+    text-align:right;
+    line-height:1.8em;
+}
+/*.narrative3 {*/
+    /*float:left;*/
+    /*font-family:monospace;*/
+    /*font-size:10px;*/
+    /*width:250px;*/
+    /*text-align:right;*/
+/*}*/
+.narrative-inline {
+    font-family:monospace;
+    font-size:10px;
+    margin-left:12px;
+}
+.narrative-inline-float {         /* old method that caused problems with PDF & print */
+    float:left;
+    font-family:monospace;
+    font-size:10px;
+    margin-left:15px;
+}
+.short-border {
+    display:block;
+    line-height:1px;
+    font-size:1px;
+    padding:0px;
+    margin:0px;
+    margin-left:75px;
+    width:525px;
+    border-top:1px solid #c3c3c3;
+}
+.long-border {
+    display:block;
+    line-height:1px;
+    font-size:1px;
+    padding:0px;
+    margin:0px;
+    margin-left:15px;
+    width:675px;
+    border-top:1px solid #c3c3c3;
+}
+.accept {
+    display: none;
+}
+
+#credentials {
+    display: none;
+}
+
+
+/*
+p {font-size:1em;}
+h1 {margin:0; padding:0; color:#242; font-weight:normal; font-size:2em;}
+h2 {margin:0 0 0.8em 0; padding:0; color:#242; font-weight:normal; font-size:1.8em;}
+h4 {margin:0; padding:0;}
+
+.align-left {color:#444; width:12em; padding:0.8em 0 0.2em 0; text-align:left; margin:1em 0 0 2.3em;}
+a, .response {color:#800;}
+.input-alert {color:red; background:#fee; text-align:center; margin:auto; border:2px dotted red; padding:1em; margin-top:1em; width:20em; -moz-border-radius:1em;}
+.odd, .even {text-align:left; border:0; margin:0; padding:1em;}
+.odd {background:white;}
+.even {background:#eee;}
+.result-set {margin:0; padding:0; font-size:1.2em;}
+
+
+#main-container {background:#fff; margin:auto; -moz-border-radius:7em; width:60em; padding:0 5em 5em 5em; margin-top:5em;}
+#project-logo img {margin:2em 0 1.5em 0; border:0;}
+#project-logo {text-align:center;}
+#contents {-moz-border-radius:5em; background:#ddd; width:48em; margin:auto; text-align:center; padding:20px;}
+
+specific css for the feedback posting page
+
+textarea {width:450px; margin:0;}
+#reporter, #summary {border:1px solid black;}
+#summary {height:200px;}
+#submission-form {margin:0.8em 0;}
+
+#login-username-container, #login-password-container, #email-address-container, #feedback-summary-container {background:#eee; width:40em; -moz-border-radius:2em; margin:auto; padding:0 0 1.2em 0; }
+#feedback-summary-container {margin-top:1em;}
+#reporter, #login-username-container input, #login-password-container input {border:1px solid black; width:450px; background: url(/crv/images/input-bg.gif);}
+*/

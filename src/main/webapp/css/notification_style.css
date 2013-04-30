@@ -1,0 +1,9 @@
+body.pdfviewer, body.standardview {
+    background-color: transparent;
+    background-image: url(../images/watermark.jpg);
+    color: black;
+}
+
+body.pdfviewer, body.standardview .inner-section {
+ 	background:none;
+}

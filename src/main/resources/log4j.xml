@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!--Replaced %F with %c{1} to display Groovy file name -->
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t thread] %-5p - (%c{1}:%L) %M - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="ROLL" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="../../../log/ecrv_admin.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t thread] %-5p - (%c{1}:%L) %M - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- This appender is used to log a specific logger content <appender name="FRAMEWORKS" 
+		class="org.apache.log4j.FileAppender"> <param name="File" value="../../../log/frameworks.log" 
+		/> <layout class="org.apache.log4j.PatternLayout"> <param name="ConversionPattern" 
+		value="%d [%t thread] %-5p - (%c{1}:%L) %M - %m%n"/> </layout> </appender> -->
+
+	<!-- Log4J Levels order: DEBUG, INFO, WARN, ERROR and FATAL -->
+	<logger name="us.mn.state">
+		<level value="debug" />
+	</logger>
+	<!-- You can turn on or off logging of various levels by class or package 
+		by adding extra logger entries. For example the entry below will meant that 
+		classes whose names start with us.mn.state.mdor.ecrv.persist will only output 
+		DEBUG level messages. -->
+	<logger name="us.mn.state.adtest">
+		<level value="debug" />
+	</logger>
+
+	<logger name="org.springframework">
+		<level value="info" />
+	</logger>
+	<logger name="org.springframework.web.servlet.mvc.support">
+		<level value="info" />
+	</logger>
+	<logger
+		name="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<level value="info" />
+	</logger>
+	<logger name="org.springframework.orm.hibernate3.support">
+		<level value="debug" />
+	</logger>
+
+	<logger name="org.springmodules.validation">
+		<level value="debug" />
+	</logger>
+
+	<logger name="org.hibernate">
+		<level value="info" />
+	</logger>
+	<logger name="org.hibernate.SQL">
+		<level value="debug"/>
+	</logger>
+	<logger name="org.hibernate.type">
+		<level value="trace"/> 
+	</logger>
+	<logger name="org.hibernate.type.descriptor.sql.BasicExtractor">
+		<level value="warn" />
+	</logger>
+	<logger name="org.hibernate.cache">
+		<level value="info" />
+	</logger>
+	<logger name="org.hibernate.test">
+		<level value="debug" />
+	</logger>
+
+	<logger name="net.sf.ehcache">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.apache.commons">
+		<level value="warn" />
+	</logger>
+	
+
+	<root>
+		<appender-ref ref="CONSOLE" />
+	</root>
+</log4j:configuration>
